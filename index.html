@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px 100px;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            
+        }
+        img{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .btn{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: solid gray;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #white{ 
+            background-color: white;
+        }
+        #aqua{ 
+            background-color: aqua;
+        }
+        #violet{ 
+            background-color: violet;
+        }
+        #black{ 
+            background-color: black;
+        }
+
+        #color-switcher{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+        <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+    </div>
+
+    <h1 class="text">About Us</h1>
+    <img  src="group-multiethnic-business-people-holding-260nw-191139815.webp" alt=""/>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore rem tempore earum quod sit dicta architecto, dolorem hic asperiores soluta aperiam velit? Error asperiores ullam odio obcaecati quam! Mollitia, soluta?</p>
+
+    <script>
+        function changeBG(color){
+        
+            document.body.style.backgroundColor=color;
+            let txt=document.getElementsByClassName("text");
+            
+            if(color == '#000000'){
+                for(elm of txt){
+                    elm.style.color="white";
+                }
+            }
+            else{
+                
+                for(elm of txt){
+                    elm.style.color="black";
+            }
+        }
+            
+        }
+    </script>
+</body>
+</html>
